@@ -1,0 +1,185 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff98b4a488a, pid=44828, tid=44876
+#
+# JRE version:  ((uninitialized)) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.3+7-LTS, mixed mode, sharing, tiered, unknown gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0xb488a]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: AMD Ryzen 5 3600 6-Core Processor              , 0 cores, 0M,  Windows 11 , 64 bit Build 25231 (10.0.25231.1000)
+Time: Sat Nov  5 21:08:15 2022 Eastern Summer Time elapsed time: -2147483648.-2147483648 seconds (-24855d -3h -14m -8s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x00000073df600000,0x00000073df700000],  sp=0x00000073df6ffa00,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xb488a]
+V  [jvm.dll+0x7e2bd9]
+V  [jvm.dll+0x3ec5cf]
+V  [jvm.dll+0x3ee151]
+C  [jli.dll+0x527b]
+C  [ucrtbase.dll+0x4b7eb]
+C  [KERNEL32.DLL+0x1335d]
+C  [ntdll.dll+0x67558]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), writing address 0x000009048e1b4a10
+
+
+Registers:
+RAX=0x0000000000000001, RBX=0x000001cdb608c510, RCX=0x000001cdb604a121, RDX=0x00007e2bd5cb89d8
+RSP=0x00000073df6ffa00, RBP=0x00000073df6ffde0, RSI=0x0000000000000010, RDI=0x0000000000000001
+R8 =0x000000000000001d, R9 =0x000000005747c15b, R10=0xfefefefefefefeff, R11=0x8080808080808080
+R12=0x0000000000000001, R13=0x000001cdb605bc10, R14=0x00007ff98bd02b18, R15=0x0000000000000001
+RIP=0x00007ff98b4a488a, EFLAGS=0x0000000000010a96
+
+Top of Stack: (sp=0x00000073df6ffa00)
+0x00000073df6ffa00:   0000000000000000 00007ff98ba69273
+0x00000073df6ffa10:   00000073df6ffde0 00000073df6ffb40
+0x00000073df6ffa20:   00000073df6ffe78 0000000000000000
+0x00000073df6ffa30:   00000073df6ffb40 00007ff98bbd2bd9
+0x00000073df6ffa40:   00000073df6ffde0 0000000000000001
+0x00000073df6ffa50:   00000073df6ffd88 0000000000000000
+0x00000073df6ffa60:   0000000000000000 0000000000000000
+0x00000073df6ffa70:   00000073df6ffd88 0000000000000000
+0x00000073df6ffa80:   00007ffa4c66c5d4 00007ffa534112b1
+0x00000073df6ffa90:   00007ffa50c828bd 00007ffa5108b907
+0x00000073df6ffaa0:   00007ffa510bb88f 00007ffa510bb7cf
+0x00000073df6ffab0:   00007ffa518e335d 00007ffa53437558
+0x00000073df6ffac0:   0000000000000000 00000073df6fff38
+0x00000073df6ffad0:   0000000000000200 0000000000000000
+0x00000073df6ffae0:   0000000001000000 00000073df6ffaf0
+0x00000073df6ffaf0:   0057005c003a0000 004f0044004e0049 
+
+Instructions: (pc=0x00007ff98b4a488a)
+0x00007ff98b4a478a:   04 00 00 48 8b 8c 24 30 04 00 00 48 33 cc e8 43
+0x00007ff98b4a479a:   95 7d 00 48 81 c4 58 04 00 00 5f 5b c3 e8 f0 98
+0x00007ff98b4a47aa:   7d 00 cc cc cc cc 40 55 57 48 83 ec 28 33 ff 48
+0x00007ff98b4a47ba:   8b e9 39 79 04 0f 8e da 00 00 00 48 89 5c 24 40
+0x00007ff98b4a47ca:   48 89 74 24 48 33 f6 4c 89 74 24 50 4c 8d 35 3b
+0x00007ff98b4a47da:   e3 85 00 4c 89 7c 24 20 44 8d 7f 01 66 66 0f 1f
+0x00007ff98b4a47ea:   84 00 00 00 00 00 48 8b 5d 08 48 8d 15 e5 e2 85
+0x00007ff98b4a47fa:   00 41 b8 14 00 00 00 48 8b 0c 33 ff 15 55 c0 7d
+0x00007ff98b4a480a:   00 48 8b 0c 33 85 c0 75 15 48 83 c1 14 8d 50 08
+0x00007ff98b4a481a:   e8 d1 72 5b 00 48 89 05 da ef a5 00 eb 54 41 b8
+0x00007ff98b4a482a:   1e 00 00 00 48 8d 15 c3 e2 85 00 ff 15 25 c0 7d
+0x00007ff98b4a483a:   00 85 c0 75 3d 4c 8b 04 33 33 c0 66 66 66 0f 1f
+0x00007ff98b4a484a:   84 00 00 00 00 00 41 0f b6 54 00 1e 48 ff c0 41
+0x00007ff98b4a485a:   0f b6 4c 06 ff 2b d1 75 06 48 83 f8 05 75 e7 0f
+0x00007ff98b4a486a:   b6 05 59 ad ab 00 85 d2 41 0f 44 c7 c8 05 4d ad
+0x00007ff98b4a487a:   ab 00 ff c7 48 83 c6 10 3b 7d 04 0f ac 65 ff ff
+0x00007ff98b4a488a:   ff 4c 8b 7c 64 20 4c 8b 74 24 50 48 8b 74 24 48
+0x00007ff98b4a489a:   48 8b 5c 24 40 48 83 c4 28 5f 5d c3 cc cc cc cc
+0x00007ff98b4a48aa:   cc cc cc cc cc cc 48 89 5c 24 10 48 89 7c 24 18
+0x00007ff98b4a48ba:   55 48 8b ec 58 83 ec 20 e8 f9 00 5c 00 48 8b f8
+0x00007ff98b4a48ca:   48 3d 00 00 00 10 73 2c 80 3d a5 b8 ac 00 00 48
+0x00007ff98b4a48da:   8d 15 90 ee 85 00 48 8b 0d 59 38 ae 00 48 0f 45
+0x00007ff98b4a48ea:   0d 49 38 ae 00 e8 8c ff 36 00 b9 01 00 00 00 e8
+0x00007ff98b4a48fa:   c2 0e 2d 00 48 8d 9f 00 00 00 f6 48 d1 ef 48 3b
+0x00007ff98b4a490a:   fb 48 8d 4d 10 48 0f 42 df e8 48 d0 5b 00 84 c0
+0x00007ff98b4a491a:   74 35 80 3d a4 ba ac 00 00 74 07 b8 01 00 00 00
+0x00007ff98b4a492a:   eb 0e e8 1f ae 26 00 48 8b c8 48 8b 10 ff 52 28
+0x00007ff98b4a493a:   48 8d 0c 00 33 d2 48 8b 45 10 48 f7 f1 48 3b d8
+0x00007ff98b4a494a:   48 0f 42 c3 48 8b d8 b9 c1 04 00 00 e8 85 04 37
+0x00007ff98b4a495a:   00 84 c0 0f 84 8a 00 00 00 b9 c1 04 00 00 e8 93
+0x00007ff98b4a496a:   11 37 00 41 b9 01 00 00 00 48 89 5d 10 4c 8d 45
+0x00007ff98b4a497a:   10 b9 c1 04 00 00 41 8d 51 05 e8 a7 32 37 00 85 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Precious Log:
+<Not initialized>
+
+
+Dynamic libraries:
+0x00007ff6c3d40000 - 0x00007ff6c3d4e000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\javaw.exe
+0x00007ffa533d0000 - 0x00007ffa535ea000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa518d0000 - 0x00007ffa51993000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa50c30000 - 0x00007ffa50fcc000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa4c660000 - 0x00007ffa4c6f6000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ff98c050000 - 0x00007ff98c4f7000 	C:\WINDOWS\SYSTEM32\AcLayers.DLL
+0x00007ffa52320000 - 0x00007ffa523c7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa51530000 - 0x00007ffa5158e000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007ffa4c800000 - 0x00007ffa4c814000 	C:\WINDOWS\SYSTEM32\SortWindows61.dll
+0x00007ffa51070000 - 0x00007ffa5118b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa4c7b0000 - 0x00007ffa4c7cb000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\VCRUNTIME140.dll
+0x00007ffa4c790000 - 0x00007ffa4c7a8000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\jli.dll
+0x00007ffa51590000 - 0x00007ffa5173a000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa51040000 - 0x00007ffa51066000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa4f830000 - 0x00007ffa4fac1000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.25231.1000_none_77db62f15ba2356c\COMCTL32.dll
+0x00007ffa521c0000 - 0x00007ffa521e9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa50a90000 - 0x00007ffa50ba6000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa50870000 - 0x00007ffa5090a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa53270000 - 0x00007ffa532a0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa4e730000 - 0x00007ffa4e73c000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\vcruntime140_1.dll
+0x00007ff9ecb70000 - 0x00007ff9ecbfd000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\msvcp140.dll
+0x00007ff98b3f0000 - 0x00007ff98c04d000 	C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\server\jvm.dll
+0x00007ffa519b0000 - 0x00007ffa51a5e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa521f0000 - 0x00007ffa52296000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa51e00000 - 0x00007ffa51f27000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa52310000 - 0x00007ffa52318000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa48880000 - 0x00007ffa488b5000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa36110000 - 0x00007ffa36119000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa53310000 - 0x00007ffa5337f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa4a000000 - 0x00007ffa4a00a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa4f050000 - 0x00007ffa4f068000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa500a0000 - 0x00007ffa502d3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa51a70000 - 0x00007ffa51df2000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa520e0000 - 0x00007ffa521b8000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa4fcc0000 - 0x00007ffa4fcf2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa50bb0000 - 0x00007ffa50c29000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.25231.1000_none_77db62f15ba2356c;C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-gamma\windows-x64\java-runtime-gamma\bin\server
+
+VM Arguments:
+java_command: <unknown>
+Launcher Type: generic
+
+[Global flags]
+
+Logging:
+Log output configuration:
+
+Environment Variables:
+PATH=C:\Program Files\Oculus\Support\oculus-runtime;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_291\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Anthony\AppData\Local\Microsoft\WindowsApps;C:\Users\Anthony\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Anthony\AppData\Roaming\npm;
+USERNAME=Anthony
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 25231 (10.0.25231.1000)
+OS uptime: 0 days 1:50 hours
+
+CPU: total 0 (initial active 0) 
+
+Memory: 0k page, system-wide physical 16332M (6830M free)
+TotalPageFile size 33740M (AvailPageFile size 19046M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 9M, peak: 9M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.3+7-LTS) for windows-amd64 JRE (17.0.3+7-LTS), built on Apr 20 2022 04:24:16 by "" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
